@@ -145,6 +145,27 @@ function initCoverCTA() {
 }
 
 /* ============================================================
+   MOBILE TOP BAR — hide on cover, show on content
+   ============================================================ */
+function initMobileTopbar() {
+  const topbar = document.getElementById('mobile-topbar');
+  const cover = document.querySelector('.cover');
+  if (!topbar || !cover) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // When cover is visible, hide topbar; when not, show it
+        topbar.classList.toggle('visible', !entry.isIntersecting);
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(cover);
+}
+
+/* ============================================================
    INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -156,4 +177,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initSmoothScroll();
   initCoverCTA();
+  initMobileTopbar();
 });

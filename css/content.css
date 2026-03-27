@@ -4,13 +4,17 @@
 .layout {
   display: flex;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .content {
   margin-left: var(--sidebar-w);
   flex: 1;
+  min-width: 0;
   padding: 56px var(--content-pad) 80px;
   max-width: calc(900px + var(--content-pad) * 2 + var(--sidebar-w));
+  overflow-x: hidden;
 }
 
 /* ============================================================
@@ -77,16 +81,72 @@
 @media (max-width: 1024px) {
   .content {
     margin-left: 0;
-    padding: 56px 36px 60px;
+    /* top padding accounts for mobile topbar (56px) + breathing room */
+    padding: 72px 36px 60px;
   }
 }
 @media (max-width: 640px) {
-  .content { padding: 48px 20px 48px; }
-  .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-  .section-header h1 { font-size: 1.3rem; }
-  table { font-size: 0.78rem; }
-  th, td { padding: 9px 12px; }
-  .diagram-container { padding: 18px 14px; margin: 18px -4px; }
+  :root {
+    --section-gap: 48px;
+    --content-pad: 20px;
+  }
+  .content { padding: 68px 20px 40px; }
+
+  /* Section headers */
+  .section-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .section-header h1 { font-size: 1.25rem; }
+  .section-badge { padding: 4px 10px; font-size: 0.62rem; }
+  .section { scroll-margin-top: 68px; }
+
+  /* Typography */
+  h2 { font-size: 1.05rem; }
+  h3 { font-size: 0.92rem; }
+  p, li { font-size: 0.92rem; }
+
+  /* Tables — horizontal scroll with visual hint */
+  .table-wrap {
+    margin-left: -8px;
+    margin-right: -8px;
+    border-radius: var(--radius-sm);
+    position: relative;
+  }
+  .table-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 24px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8));
+    pointer-events: none;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    opacity: 0.7;
+  }
+  table { font-size: 0.76rem; min-width: 420px; }
+  th { padding: 10px 12px; font-size: 0.68rem; }
+  td { padding: 9px 12px; }
+
+  /* Diagrams */
+  .diagram-container {
+    padding: 16px 12px;
+    margin: 16px -6px;
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+  }
+  .diagram-title { font-size: 0.64rem; letter-spacing: 1px; }
+
+  /* Callouts */
+  .note, .related-party-box { padding: 14px 16px; font-size: 0.85rem; }
+  .disclaimer-box { padding: 20px 18px; font-size: 0.84rem; }
+  blockquote { padding: 10px 16px; font-size: 0.9rem; }
+
+  /* Back to top — smaller on mobile */
+  .back-to-top {
+    width: 40px; height: 40px;
+    bottom: 20px; right: 16px;
+  }
+  .back-to-top svg { width: 17px; height: 17px; }
+
+  /* Footer */
+  footer { margin-top: 48px; padding: 24px 0; font-size: 0.75rem; }
 }
 
 /* ============================================================
