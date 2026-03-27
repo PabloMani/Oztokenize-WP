@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OzTokenize — White Paper v2.0</title>
+<meta name="description" content="Regulated Infrastructure for Real-World Asset Tokenization in Australia">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/cover.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/content.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+
+<!-- Progress Bar -->
+<div id="progress-bar"></div>
+
+<!-- ============================================================
+     COVER / HERO PAGE
+     ============================================================ -->
+<div class="cover">
+  <!-- Background effects -->
+  <div class="cover-grid"></div>
+  <div class="cover-glow cover-glow--teal"></div>
+  <div class="cover-glow cover-glow--gold"></div>
+  <div class="cover-glow cover-glow--navy"></div>
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Content -->
+  <div class="cover-content">
+    <img src="assets/logo-sidebar.png" alt="OzTokenize" class="cover-logo">
+    <div class="cover-badge">White Paper v2.0</div>
+    <h1>Regulated Infrastructure for<br><span>Real-World Asset Tokenization</span></h1>
+    <p class="cover-sub">
+      Australia's compliance-first platform enabling investors to access
+      institutional-grade alternative investments through blockchain-enhanced
+      Managed Investment Schemes.
+    </p>
+
+    <div class="cover-stats">
+      <div class="cover-stat">
+        <div class="cover-stat-value">$16.7B</div>
+        <div class="cover-stat-label">AUD Efficiency Gains</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-value">3</div>
+        <div class="cover-stat-label">Asset Verticals</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-value">ERC-1400</div>
+        <div class="cover-stat-label">Security Tokens</div>
+      </div>
+      <div class="cover-stat">
+        <div class="cover-stat-value">$50M</div>
+        <div class="cover-stat-label">Year 1 AUM Target</div>
+      </div>
+    </div>
+
+    <a href="#disclaimer" id="cover-cta" class="cover-cta">
+      Read White Paper
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </div>
+
+  <!-- Bottom meta -->
+  <div class="cover-meta">
+    <span class="cover-version">March 2026 &bull; A Nortech Labs Initiative &bull; Confidential</span>
+    <div class="cover-scroll-icon"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LAYOUT: SIDEBAR + CONTENT
+     ============================================================ -->
+<div class="layout">
+
+<!-- Sidebar -->
+<nav id="sidebar" class="sidebar">
+  <div class="sidebar-logo">
+    <img src="assets/logo-sidebar.png" alt="OzTokenize">
+  </div>
+  <div class="sidebar-nav">
+    <a href="#disclaimer" class="nav-link"><span class="nav-num">!</span>Disclaimer</a>
+    <a href="#s1" class="nav-link"><span class="nav-num">01</span>Executive Summary</a>
+    <a href="#s2" class="nav-link"><span class="nav-num">02</span>RWA Tokenization Landscape</a>
+    <a href="#s3" class="nav-link"><span class="nav-num">03</span>Legal &amp; Regulatory Framework</a>
+    <a href="#s4" class="nav-link"><span class="nav-num">04</span>Platform Architecture</a>
+    <a href="#s5" class="nav-link"><span class="nav-num">05</span>Stakeholder Flows</a>
+    <a href="#s6" class="nav-link"><span class="nav-num">06</span>Banking &amp; Fund Flows</a>
+    <a href="#s7" class="nav-link"><span class="nav-num">07</span>KYC, AML &amp; CTF</a>
+    <a href="#s8" class="nav-link"><span class="nav-num">08</span>Asset Class Playbooks</a>
+    <a href="#s9" class="nav-link"><span class="nav-num">09</span>Crypto &amp; SwapAroo</a>
+    <a href="#s10" class="nav-link"><span class="nav-num">10</span>Automated Audit System</a>
+    <a href="#s11" class="nav-link"><span class="nav-num">11</span>Token Model</a>
+    <a href="#s12" class="nav-link"><span class="nav-num">12</span>Related-Party Management</a>
+    <a href="#s13" class="nav-link"><span class="nav-num">13</span>Valuation Framework</a>
+    <a href="#s14" class="nav-link"><span class="nav-num">14</span>Revenue Model</a>
+    <a href="#s15" class="nav-link"><span class="nav-num">15</span>Risk Factors</a>
+    <a href="#s16" class="nav-link"><span class="nav-num">16</span>Roadmap</a>
+    <a href="#s17" class="nav-link"><span class="nav-num">17</span>Team &amp; Governance</a>
+    <a href="#appendix-a" class="nav-link"><span class="nav-num">A</span>Glossary</a>
+    <a href="#appendix-b" class="nav-link"><span class="nav-num">B</span>Regulatory References</a>
+  </div>
+  <div class="sidebar-footer">
+    v2.0 &bull; March 2026<br>
+    &copy; OzTokenize / Nortech Labs
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div id="sidebar-overlay"></div>
+
+<!-- Main content -->
+<main class="content">
+
+<!-- DISCLAIMER -->
+<section id="disclaimer" class="section">
+<div class="section-header">
+  <span class="section-badge">!</span>
+  <h1>Important Notice and Disclaimer</h1>
+</div>
+<div class="disclaimer-box">
+<p>This White Paper is provided for informational purposes only and does not constitute financial, legal, or investment advice. It is not an offer or solicitation to buy or sell any securities, financial instruments, or tokens in any jurisdiction.</p>
+<p>OzTokenize operates under the Australian regulatory framework, including the Corporations Act 2001 (Cth), Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (Cth), and applicable ASIC Regulatory Guides and Information Sheets. Investment opportunities described herein are available to both Wholesale and Retail Investors under the applicable regulatory requirements.</p>
+<p style="margin-bottom:0">Prospective investors should consult their own financial, legal, and tax advisors before making any investment decisions. Each investment opportunity will be accompanied by a separate Information Memorandum (IM) or Product Disclosure Statement (PDS) containing specific terms, risks, and disclosures relevant to that offering.</p>
+</div>
+</section>
+
+<!-- SECTION 1 -->
+<section id="s1" class="section">
+<div class="section-header">
+  <span class="section-badge">01</span>
+  <h1>Executive Summary</h1>
+</div>
+
+<p>OzTokenize is building Australia&rsquo;s compliance-first infrastructure for real-world asset (RWA) tokenization. The platform enables investors &mdash; both Wholesale and Retail &mdash; to access institutional-grade alternative investments through a fully regulated Managed Investment Scheme (MIS) structure, enhanced by blockchain-based ownership records.</p>
+
+<div class="note"><strong>Core design principle:</strong> strip away the technology layer, and what remains is a fully functional, ASIC-defensible investment platform. Every workflow, compliance check, and investor protection maps directly to existing obligations under the Corporations Act 2001, ASIC Regulatory Guides, and established fund administration practices. The blockchain layer enhances transparency, auditability, and operational efficiency without replacing any legal or regulatory requirement.</div>
+
+<h2>1.1 The Opportunity</h2>
+<p>The Reserve Bank of Australia&rsquo;s Project Acacia identified that asset tokenization could unlock AUD 16.7 billion per year in efficiency gains across Australian capital markets. The Digital Assets Framework Bill 2025, combined with updated ASIC guidance (Information Sheet 225, October 2025), has created the clearest regulatory pathway for compliant tokenization that Australia has ever seen.</p>
+
+<h2>1.2 The Solution</h2>
+<p>OzTokenize provides the bridge between traditional fund administration and blockchain technology. The platform operates as a Corporate Authorised Representative (CAR) under an existing Australian Financial Services Licence (AFSL), with an independent Trustee acting as custodian of all scheme assets.</p>
+<p>The platform&rsquo;s architecture is built on a Head Trust with individual Sub-Trusts for each asset class, following a wrap-account / master-fund model that trustees and regulators understand. Tokens issued on the Ethereum blockchain represent digital records of beneficial ownership in each Sub-Trust. The token does not create or replace the legal interest; the legal interest arises from the Trust Deed and Information Memorandum, as it always has.</p>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 1 &mdash; Trust Structure Overview</div>
+<div class="mermaid">
+graph LR
+  A[Investor] -->|Onboard + KYC| B[Head Trust]
+  B --> C[Sub-Trust 1<br>Real Estate]
+  B --> D[Sub-Trust 2<br>Alphractal]
+  B --> E[Sub-Trust 3<br>Luxury Cars]
+  C --> F[Token = Ownership Record]
+  D --> F
+  E --> F
+  F --> G[Ethereum Blockchain<br>ERC-1400]
+  style A fill:#EDF5FA,stroke:#1B2A4A,stroke-width:2px
+  style B fill:#1B2A4A,color:#fff,stroke:#1B2A4A,stroke-width:2px
+  style G fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+  style F fill:#E8F5E8,stroke:#2E8B8B,stroke-width:2px
+</div>
+</div>
+
+<h2>1.3 Initial Asset Classes</h2>
+<p>OzTokenize launches with three asset verticals: real estate development (Sub-Trust acquires property via put-and-call option), technology equity (SAFE-based investment in Alphractal, a crypto analytics SaaS), and luxury car rental income (asset-backed income fund operated by Velo Rentals with token-based vehicle tracking). A fourth vertical, infrastructure and development projects, will follow in subsequent phases.</p>
+
+<h2>1.4 Key Differentiators</h2>
+<ul>
+<li><strong>Compliance-first architecture:</strong> every feature maps to a Corporations Act obligation before it maps to a blockchain function.</li>
+<li><strong>Independent Trustee oversight:</strong> dual-control banking, threshold-based expense approval, and quarterly compliance attestation.</li>
+<li><strong>Full KYC/AML/CTF via Sumsub:</strong> including PEP screening and ongoing monitoring.</li>
+<li><strong>Triple-layer automated audit:</strong> financial reconciliation, smart contract verification, and regulatory compliance checks.</li>
+<li><strong>Retail and Wholesale from day one:</strong> full regulatory compliance for both investor classes, with PDS for retail and IM for wholesale.</li>
+<li><strong>SwapAroo integration:</strong> regulated fiat-to-crypto on-ramp/off-ramp for international investors, operating under dual AUSTRAC licences with Westpac banking.</li>
+</ul>
+
+<h2>1.5 Financial Outlook</h2>
+<p>The platform targets AUD 50 million in Assets Under Management (AUM) in Year 1 and AUD 100&ndash;200 million by Year 2, driven by capital deployment across the initial three asset verticals. Revenue is generated through upfront structuring fees, ongoing management fees, and platform technology fees.</p>
+</section>
+
+<!-- SECTION 2 -->
+<section id="s2" class="section">
+<div class="section-header">
+  <span class="section-badge">02</span>
+  <h1>The Australian RWA Tokenization Landscape</h1>
+</div>
+
+<h2>2.1 Market Opportunity</h2>
+<p>Global real-world asset tokenization is projected to reach USD 16 trillion by 2030 (Boston Consulting Group). Within Australia, the RBA&rsquo;s Project Acacia (2024&ndash;2025) concluded that tokenization could generate AUD 16.7 billion per year in operational efficiencies from reduced settlement times (T+0 versus T+2), automated compliance, fractional ownership, and elimination of intermediary layers.</p>
+<p>Australia&rsquo;s position is uniquely favourable: mature financial services regulation, a sophisticated investor base with AUD 3.9 trillion in superannuation capital (2025), and government support through Treasury consultation and the Digital Assets Framework Bill 2025.</p>
+
+<h2>2.2 Regulatory Developments</h2>
+<ol>
+<li><strong>ASIC Information Sheet 225 (Updated October 2025):</strong> Confirms that tokens representing interests in a MIS are financial products under Chapter 7 of the Corporations Act. Eliminates regulatory ambiguity.</li>
+<li><strong>Digital Assets Framework Bill 2025:</strong> Proposes licensing regime for digital asset service providers, creates taxonomy for digital assets, establishes regulatory sandbox.</li>
+<li><strong>RBA Project Acacia:</strong> Demonstrated that programmable settlement on DLT can coexist with Australia&rsquo;s existing payment infrastructure.</li>
+</ol>
+
+<h2>2.3 The Gap in the Market</h2>
+<p>Existing platforms fall into two categories: technology-first projects that struggle with regulation, and traditional fund managers treating blockchain as marketing. Neither produces infrastructure a Trustee can confidently underwrite.</p>
+<p>OzTokenize occupies the space between these extremes. Designed from the ground up for Trustee compliance requirements, with blockchain layered on a structure that functions as a regulated investment platform even without a single token minted.</p>
+</section>
+
+<!-- SECTION 3 -->
+<section id="s3" class="section">
+<div class="section-header">
+  <span class="section-badge">03</span>
+  <h1>Legal and Regulatory Framework</h1>
+</div>
+
+<p>Every element exists because a specific provision of the Corporations Act, an ASIC Regulatory Guide, or the AML/CTF Act requires it.</p>
+
+<h2>3.1 Managed Investment Scheme (MIS) Structure</h2>
+<p>OzTokenize operates as a registered Managed Investment Scheme under Chapter 5C of the Corporations Act 2001. The model is a Head Trust with individual Sub-Trusts for each asset class &mdash; a wrap-account / master-fund architecture allowing investors to onboard once (single KYC/AML), then allocate to individual Sub-Trusts with distinct risk profiles and distribution methodologies.</p>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 2 &mdash; MIS Legal Structure</div>
+<div class="mermaid">
+graph TB
+  AFSL[AFSL Holder] -->|CAR Agreement| OZT[OzTokenize<br>Corporate Authorised<br>Representative]
+  TRUSTEE[Independent Trustee] -->|Custodian| HT[HEAD TRUST<br>Trust Deed + Constitution]
+  OZT -->|Operates| HT
+  HT --> ST1[Sub-Trust 1<br>Real Estate]
+  HT --> ST2[Sub-Trust 2<br>Alphractal]
+  HT --> ST3[Sub-Trust 3<br>Luxury Cars]
+  HT --> ST4[Sub-Trust 4+<br>Future Assets]
+  INV[Investors<br>Wholesale + Retail] -->|Single KYC<br>Onboarding| HT
+  style HT fill:#1B2A4A,color:#fff,stroke:#1B2A4A,stroke-width:2px
+  style TRUSTEE fill:#2E8B8B,color:#fff,stroke:#2E8B8B,stroke-width:2px
+  style INV fill:#EDF5FA,stroke:#1B2A4A,stroke-width:2px
+  style OZT fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+</div>
+</div>
+
+<h2>3.2 The CAR Agreement</h2>
+<p>OzTokenize operates as a Corporate Authorised Representative (CAR) under an existing AFSL holder. This is a bridge to a standalone AFSL. The architecture ensures the transition requires no structural changes to the trust framework, investor accounts, or compliance systems.</p>
+
+<h2>3.3 Trustee and Custodial Oversight</h2>
+<p>An independent, Melbourne-based Trustee with extensive fund administration experience acts as custodian of all scheme assets:</p>
+<ul>
+<li>Holding all scheme assets (bank accounts, property titles) on behalf of investors</li>
+<li>Dual-signature control over the Applications Account</li>
+<li>Approving expenditure above thresholds on the Operational Account</li>
+<li>Quarterly compliance attestation on KYC/AML status</li>
+<li>Reconciling platform data against their own records via API data feeds</li>
+<li>Reviewing and signing off all IM/PDS documents before issuance</li>
+<li>Oversight of related-party transactions</li>
+</ul>
+<p>The Trustee does not access the OzTokenize platform directly. The platform provides structured API data feeds ingested into the Trustee&rsquo;s own compliance and reconciliation systems.</p>
+
+<h2>3.4 Investor Classification</h2>
+<p>OzTokenize accepts both Wholesale and Retail investors from launch. Wholesale: AUD 500,000+ single transaction, or accountant certificate (net assets AUD 2.5M+ or gross income AUD 250K+ p.a. for two years). Retail: Product Disclosure Statement (PDS) in compliance with Part 7.9 of the Corporations Act, with consumer protection measures including cooling-off periods where applicable.</p>
+<p>For retail custody, OzTokenize engages an external custodian meeting the AUD 10 million NTA requirement, or satisfies the NTA threshold directly.</p>
+
+<h2>3.5 Three Regulators</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Regulator</th><th>Jurisdiction</th><th>Key Obligations</th></tr>
+<tr><td>ASIC</td><td>Corporations Act 2001, MIS registration, financial product disclosure, CAR oversight</td><td>Trust Deed compliance, IM/PDS accuracy, fair dealing, proper record-keeping, ongoing reporting</td></tr>
+<tr><td>ATO</td><td>Tax treatment of scheme distributions, GST on management fees, withholding obligations</td><td>Distribution statements with tax breakdown, withholding for non-residents, ABN/TFN per Sub-Trust</td></tr>
+<tr><td>AUSTRAC</td><td>AML/CTF Act 2006</td><td>KYC/AML via Sumsub, ongoing monitoring. AUSTRAC registration applies if OzTokenize operates a secondary token market.</td></tr>
+</table>
+</div>
+
+<h2>3.6 Jurisdiction and Investor Restrictions</h2>
+<ul>
+<li>Sanctioned countries (DFAT consolidated list) excluded entirely.</li>
+<li>United States persons excluded at launch (withholding tax complexity, SEC/CFTC overlap).</li>
+<li>Commonwealth countries accepted where wholesale/retail tests are substantially equivalent.</li>
+<li>Jurisdiction screening automated at onboarding via Sumsub, with manual review for edge cases.</li>
+</ul>
+</section>
+
+<!-- SECTION 4 -->
+<section id="s4" class="section">
+<div class="section-header">
+  <span class="section-badge">04</span>
+  <h1>Platform Architecture</h1>
+</div>
+
+<p>OzTokenize&rsquo;s architecture follows the same principle as the legal structure: every traditional function must work independently before the blockchain layer is applied.</p>
+
+<h2>4.1 Four-Layer Architecture</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 3 &mdash; Four-Layer Platform Architecture</div>
+<div class="mermaid">
+graph TB
+  subgraph P[Presentation Layer]
+    P1[Investor Portal]
+    P2[Asset Owner Dashboard]
+    P3[Trustee Data Feed]
+    P4[Admin Console]
+  end
+  subgraph A[Application Layer]
+    A1[Onboarding]
+    A2[Investment Processing]
+    A3[Distribution Engine]
+    A4[Expense Management]
+    A5[Compliance Engine]
+  end
+  subgraph B[Blockchain Layer]
+    B1[Token Mint/Burn]
+    B2[Ownership Registry]
+    B3[Transfer Restrictions]
+  end
+  subgraph D[Data + Integration Layer]
+    D1[Database]
+    D2[Sumsub]
+    D3[Banking APIs]
+    D4[SwapAroo]
+    D5[Valuation Feeds]
+  end
+  P --> A
+  A --> B
+  A --> D
+  style P fill:#EDF5FA,stroke:#1B2A4A,stroke-width:2px
+  style A fill:#E8F5E8,stroke:#2E8B8B,stroke-width:2px
+  style B fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+  style D fill:#F3E8F5,stroke:#7B4FA0,stroke-width:2px
+</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<tr><th>Layer</th><th>Function</th><th>Traditional Equivalent</th></tr>
+<tr><td>Presentation</td><td>Investor portal, asset owner dashboard, trustee data feeds, admin console</td><td>Fund manager client portal</td></tr>
+<tr><td>Application</td><td>Onboarding, KYC, investment processing, distribution calculation, reporting, expenses</td><td>Fund administration back-office</td></tr>
+<tr><td>Blockchain</td><td>Token minting/burning, ownership registry, transfer restrictions, on-chain audit trail</td><td>Share registry + compliance overlay</td></tr>
+<tr><td>Data &amp; Integration</td><td>Database, API gateway, Sumsub, banking, SwapAroo, valuation feeds</td><td>Custodian and bank integrations</td></tr>
+</table>
+</div>
+
+<div class="note"><strong>Key:</strong> If the blockchain layer were disabled, the platform continues to function as a traditional fund administration system using its database records as the authoritative registry.</div>
+
+<h2>4.2 Blockchain: ERC-1400 Security Tokens</h2>
+<p>OzTokenize deploys on the Ethereum blockchain using ERC-1400 security token standards:</p>
+<ul>
+<li><strong>Partition-based ownership:</strong> each Sub-Trust&rsquo;s tokens exist in a separate partition.</li>
+<li><strong>Transfer restrictions:</strong> whitelist-based transfers; only KYC-verified investors can hold tokens.</li>
+<li><strong>Forced transfers:</strong> operator-controlled for regulatory scenarios (court orders, deceased estates).</li>
+<li><strong>Document linking:</strong> on-chain references to IM, Trust Deed, distribution statements.</li>
+<li><strong>Controlled issuance:</strong> tokens minted only when subscription confirmed (payment cleared, KYC verified).</li>
+</ul>
+
+<h2>4.3 Hybrid Custody Model</h2>
+<ul>
+<li><strong>Traditional assets</strong> (bank accounts, property titles, share certificates): held by the Trustee/Custodian under the Trust Deed.</li>
+<li><strong>Digital assets</strong> (tokens): the smart contract is the custody mechanism, with multi-signature key management.</li>
+<li><strong>Crypto assets</strong> (where applicable): institutional-grade wallet infrastructure with multi-sig authorisation.</li>
+</ul>
+
+<h2>4.4 Integration Map</h2>
+<div class="table-wrap">
+<table>
+<tr><th>System</th><th>Purpose</th><th>Method</th></tr>
+<tr><td>Sumsub</td><td>KYC/AML, PEP screening, ongoing monitoring</td><td>REST API + webhooks</td></tr>
+<tr><td>Banking (Applications)</td><td>Investor subscriptions, distributions</td><td>Bank API, dual-signature</td></tr>
+<tr><td>Banking (Operational)</td><td>Operating expenses, asset management costs</td><td>Bank API, threshold approval</td></tr>
+<tr><td>SwapAroo</td><td>Fiat-to-crypto bridge for international investors</td><td>Internal API (Nortech)</td></tr>
+<tr><td>Valuation Feeds</td><td>Asset pricing (RedBook, CarSales, independent valuers)</td><td>REST API / periodic import</td></tr>
+<tr><td>Accounting Firm (TBA)</td><td>Distribution statements, tax, depreciation, GST</td><td>Structured data exchange</td></tr>
+<tr><td>Ethereum</td><td>Token operations, on-chain audit trail</td><td>Web3 / Ethers.js</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SECTION 5 -->
+<section id="s5" class="section">
+<div class="section-header">
+  <span class="section-badge">05</span>
+  <h1>Stakeholder Flows</h1>
+</div>
+
+<h2>5.1 Investor Lifecycle</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 4 &mdash; Investor Lifecycle</div>
+<div class="mermaid">
+graph TD
+  A[1. Register on Platform] --> B[2. KYC/AML via Sumsub]
+  B --> C{KYC Clear?}
+  C -->|Yes| D[3. Wholesale or Retail Classification]
+  C -->|No| E[Manual Review or Reject]
+  E -->|Cleared| D
+  D --> F[4. Browse Sub-Trusts]
+  F --> G[5. Submit Subscription]
+  G --> H[6. Payment to Applications Account]
+  H --> I{Funds + KYC OK?}
+  I -->|Yes| J[7. Tokens Minted ERC-1400]
+  I -->|No| K[Hold / Return]
+  J --> L[8. Ongoing: Distributions + Reports]
+  L --> M[9. Redemption: Tokens Burned]
+  style J fill:#2E8B8B,color:#fff,stroke:#2E8B8B,stroke-width:2px
+  style M fill:#C8A951,color:#1B2A4A,stroke:#C8A951,stroke-width:2px
+  style A fill:#EDF5FA,stroke:#1B2A4A,stroke-width:2px
+</div>
+</div>
+
+<ol>
+<li><strong>Registration:</strong> investor creates an account and provides personal/entity details.</li>
+<li><strong>KYC/AML:</strong> Sumsub performs identity verification, document checks, PEP screening, sanctions screening, and jurisdiction validation.</li>
+<li><strong>Classification:</strong> wholesale (AUD 500K+ or accountant certificate) or retail (PDS issued, cooling-off period applies).</li>
+<li><strong>Sub-Trust Selection:</strong> investor browses opportunities with IM/PDS, risk disclosures, fee structures, and distribution methodology.</li>
+<li><strong>Subscription:</strong> application submitted with IM/PDS acknowledgment and investor declaration.</li>
+<li><strong>Payment:</strong> funds transferred to Applications Account (Trustee-controlled). Cleared funds and KYC verification required.</li>
+<li><strong>Token Issuance:</strong> ERC-1400 tokens minted in the relevant Sub-Trust partition.</li>
+<li><strong>Ongoing:</strong> distribution statements, tax documents, performance updates via the portal.</li>
+<li><strong>Redemption:</strong> platform calculates NAV-based value, Trustee approves, tokens burned, funds disbursed.</li>
+</ol>
+
+<h2>5.2 Asset Owner Flow</h2>
+<ul>
+<li><strong>Onboarding:</strong> propose an asset, OzTokenize conducts due diligence, structures the Sub-Trust, engages lawyers for the IM.</li>
+<li><strong>Operations:</strong> submit operational reports, expense claims, maintenance records via dashboard.</li>
+<li><strong>Expenses:</strong> below threshold = auto-approved; above threshold = Trustee approval required.</li>
+<li><strong>Income data:</strong> provide raw data (rental income, revenue) for distribution calculations.</li>
+<li><strong>Related-party disclosure:</strong> platform flags relationships and enforces enhanced approval requirements.</li>
+</ul>
+
+<h2>5.3 Trustee Flow</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 5 &mdash; Trustee Data Flow</div>
+<div class="mermaid">
+graph LR
+  OZT[OzTokenize Platform] -->|API Feeds| TR[Trustee Independent Systems]
+  BC[Ethereum Blockchain] -->|Third data source| TR
+  BANK[Bank Statements] -->|Direct access| TR
+  TR --> REC[Reconciliation]
+  TR --> ATT[Quarterly Attestation]
+  TR --> APP[Expense Approvals]
+  style OZT fill:#2E8B8B,color:#fff,stroke:#2E8B8B,stroke-width:2px
+  style TR fill:#C8A951,color:#1B2A4A,stroke:#C8A951,stroke-width:2px
+  style BC fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+</div>
+</div>
+
+<ul>
+<li><strong>API data feeds:</strong> investor registry, KYC status, transaction ledger, bank reconciliation data, distribution calculations, expense approvals. No web portal access.</li>
+<li><strong>Quarterly attestation:</strong> reviews complete KYC register and attests to compliance.</li>
+<li><strong>Expense approval:</strong> above-threshold expenses appear in approval queue.</li>
+<li><strong>Bank control:</strong> dual-signature on Applications Account, visibility over Operational Account.</li>
+<li><strong>IM/PDS review:</strong> every disclosure document is reviewed and signed off before issuance.</li>
+<li><strong>Triple-source reconciliation:</strong> platform data vs. bank statements vs. on-chain token registry.</li>
+</ul>
+</section>
+
+<!-- SECTION 6 -->
+<section id="s6" class="section">
+<div class="section-header">
+  <span class="section-badge">06</span>
+  <h1>Banking Architecture and Fund Flows</h1>
+</div>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 6 &mdash; Banking Architecture</div>
+<div class="mermaid">
+graph TB
+  INV[Investors] -->|Subscription AUD| AA[APPLICATIONS ACCOUNT<br>Trustee Controlled<br>Dual-Signature]
+  AA -->|Trustee Approved| OA[OPERATIONAL ACCOUNT<br>Day-to-Day Expenses]
+  AA -->|Distribution<br>Trustee Approved| INV
+  OA --> AUTO[Below Threshold:<br>Auto-Approved]
+  OA --> TAPPR[Above Threshold:<br>Trustee Approval]
+  style AA fill:#1B2A4A,color:#fff,stroke:#1B2A4A,stroke-width:2px
+  style OA fill:#2E8B8B,color:#fff,stroke:#2E8B8B,stroke-width:2px
+</div>
+</div>
+
+<h2>6.1 Applications Account (Trust Account)</h2>
+<ul>
+<li>Held in the Trustee&rsquo;s name (or jointly under dual-signature).</li>
+<li>All investor subscription payments are directed here.</li>
+<li>No funds released without dual authorisation (OzTokenize initiates, Trustee approves).</li>
+<li>Distribution payments disbursed from this account after Trustee review.</li>
+</ul>
+
+<h2>6.2 Operational Account</h2>
+<ul>
+<li>Funded by transfers from Applications Account (Trustee-approved).</li>
+<li>Below threshold: approved autonomously by OzTokenize.</li>
+<li>Above threshold: Trustee approval required (logged, time-stamped, auditable).</li>
+<li>Property development: stage-gate funding per construction milestone.</li>
+</ul>
+
+<h2>6.3 Subscription Flow</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 7 &mdash; Subscription Sequence</div>
+<div class="mermaid">
+sequenceDiagram
+  participant I as Investor
+  participant P as Platform
+  participant S as Sumsub
+  participant AA as Applications Acct
+  participant T as Trustee
+  participant BC as Blockchain
+  I->>P: Subscribe
+  I->>AA: Transfer AUD
+  P->>S: Check KYC
+  S-->>P: Clear
+  AA-->>P: Funds Cleared
+  P->>T: Notify
+  T-->>P: Reconciled
+  P->>BC: Mint Tokens
+  P->>I: Confirmation
+</div>
+</div>
+
+<h2>6.4 Distribution Flow</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 8 &mdash; Distribution Sequence</div>
+<div class="mermaid">
+sequenceDiagram
+  participant AO as Asset Owner
+  participant P as Platform
+  participant ACC as Accounting Firm
+  participant T as Trustee
+  participant I as Investor
+  AO->>P: Income Data
+  P->>ACC: Calculate Tax Components
+  ACC-->>P: Distribution Statement
+  P->>T: Submit for Approval
+  T-->>P: Approved
+  P->>I: AUD + Statement
+</div>
+</div>
+
+<h2>6.5 Redemption Flow</h2>
+<ol>
+<li>Investor submits redemption request (subject to lockup if applicable).</li>
+<li>Platform calculates NAV-based redemption value.</li>
+<li>Trustee reviews and approves.</li>
+<li>Tokens burned; investor registry updated.</li>
+<li>Proceeds transferred to investor&rsquo;s bank account.</li>
+</ol>
+</section>
+
+<!-- SECTION 7 -->
+<section id="s7" class="section">
+<div class="section-header">
+  <span class="section-badge">07</span>
+  <h1>KYC, AML, and Counter-Terrorism Financing</h1>
+</div>
+
+<h2>7.1 Sumsub Integration</h2>
+<p>Outsourced under formal outsourcing agreement (Trustee requirement):</p>
+<ul>
+<li>Identity document verification with liveness detection</li>
+<li>Address verification</li>
+<li>Sanctions screening (DFAT, OFAC, EU, UN)</li>
+<li>PEP screening with ongoing monitoring</li>
+<li>Adverse media screening</li>
+<li>Automated ongoing monitoring with re-verification triggers</li>
+</ul>
+
+<h2>7.2 KYC Status Lifecycle</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 9 &mdash; KYC Status Lifecycle</div>
+<div class="mermaid">
+graph TD
+  A[Documents Submitted] --> B[Sumsub Processing]
+  B --> C{Checks Pass?}
+  C -->|All Clear| D[CLEAR]
+  C -->|PEP Match| E[PEP CHECK]
+  C -->|Issues| F[FLAGGED]
+  C -->|Sanctions| G[REJECTED]
+  F --> H{Review}
+  H -->|OK| D
+  H -->|Denied| G
+  E --> I{EDD Done?}
+  I -->|OK| D
+  I -->|Denied| G
+  D --> J[Ongoing Monitoring]
+  J -->|Change| K[SUSPENDED]
+  K --> H
+  style D fill:#E8F5E8,stroke:#2E8B8B,stroke-width:2px
+  style G fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+  style E fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+  style K fill:#fef3c7,stroke:#d97706,stroke-width:2px
+</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<tr><th>Status</th><th>Meaning</th><th>Investor Action</th></tr>
+<tr><td>Pending</td><td>Verification in progress</td><td>Wait</td></tr>
+<tr><td>Clear</td><td>All checks passed</td><td>May invest</td></tr>
+<tr><td>Flagged</td><td>Manual review required</td><td>Provide additional docs</td></tr>
+<tr><td>PEP Check</td><td>Enhanced due diligence</td><td>Provide background info</td></tr>
+<tr><td>Rejected</td><td>Cannot proceed</td><td>Appeal or reapply</td></tr>
+<tr><td>Suspended</td><td>Previously cleared, now flagged</td><td>Activity paused</td></tr>
+</table>
+</div>
+
+<h2>7.3 Trustee Attestation</h2>
+<p>Quarterly review: all active investors Clear, flagged/suspended managed, PEP checks completed, Sumsub outsourcing agreement in good standing.</p>
+
+<h2>7.4 AUSTRAC Considerations</h2>
+<p>No separate AUSTRAC registration at launch (no secondary market, no exchange/remittance). SwapAroo holds dual AUSTRAC licences independently.</p>
+</section>
+
+<!-- SECTION 8 -->
+<section id="s8" class="section">
+<div class="section-header">
+  <span class="section-badge">08</span>
+  <h1>Asset Class Playbooks</h1>
+</div>
+
+<h2>8.1 Real Estate: Property Development</h2>
+<p><strong>Structure:</strong> Individual Sub-Trust acquires property (or right to acquire via put-and-call option). Tokens issued after legal ownership transfers.</p>
+<p><strong>First Asset: Cleveland, QLD.</strong> Three-quarters through construction. Tokens issued only after ownership transfer to Sub-Trust. Investors receive tokens representing an actual property, not a promise.</p>
+<p><strong>Pipeline: Park Lane Southport.</strong> Hotel on Gold Coast.</p>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 10 &mdash; Real Estate Investment Flow</div>
+<div class="mermaid">
+graph TD
+  A[Investor Subscribes] --> B[Funds to Applications Account]
+  B --> C[Trustee Approves]
+  C --> D[Exercise Put-and-Call]
+  D --> E[Ownership to Sub-Trust]
+  E --> F[Tokens Minted]
+  F --> G{Completed?}
+  G -->|No| H[Stage-Gate Funding]
+  H --> G
+  G -->|Yes| I[Rental/Sale Proceeds]
+  I --> J[Distribution per IM]
+  style E fill:#E8F5E8,stroke:#2E8B8B,stroke-width:2px
+  style F fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+  style J fill:#2E8B8B,color:#fff,stroke:#2E8B8B,stroke-width:2px
+</div>
+</div>
+
+<p><strong>Valuation:</strong> Independent registered valuer at acquisition, annual revaluations, NAV per token = (Property Value + Cash - Liabilities) / Total Tokens.</p>
+<p><strong>Compliance:</strong> independent valuation, stage-gate expenses, GST registration, accounting firm manages depreciation/tax.</p>
+
+<h2>8.2 Technology Equity: Alphractal</h2>
+<p><strong>Structure:</strong> SAFE into NorTech Labs Pty Ltd (Australia), which holds IP for Alphractal, a crypto analytics SaaS (Delaware, USA).</p>
+
+<div class="related-party-box"><strong>Related Party:</strong> NorTech Labs owns 30% of Alphractal shares. Pablo serves as CTO of both entities. Prominently disclosed in IM, Trustee informed, enhanced governance applies.</div>
+
+<p><strong>Business:</strong> ~25,000 registered users, &lt;2% conversion, USD 39/month starting. Raising seed round for USD 2M marketing investment.</p>
+<p><strong>Terms:</strong> 24-month lockup. Token pricing from SAFE valuation cap, adjusted for subsequent events.</p>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 11 &mdash; Alphractal (SAFE) Investment Flow</div>
+<div class="mermaid">
+graph TD
+  A[Investor Subscribes] --> B[Funds to Applications Account]
+  B --> C[Trustee Approves]
+  C --> D[SAFE Executed with NorTech Labs]
+  D --> E[Tokens Issued]
+  E --> F[Marketing Capital Deployed]
+  E --> G[Ongoing Reporting]
+  G --> H{Conversion Event?}
+  H -->|Equity Round| I[SAFE Converts, Tokens Repriced]
+  H -->|Acquisition/IPO| J[Exit Proceeds Distributed]
+  style D fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+  style J fill:#2E8B8B,color:#fff,stroke:#2E8B8B,stroke-width:2px
+</div>
+</div>
+
+<h2>8.3 Luxury Car Rental Income</h2>
+<p><strong>Structure:</strong> Sub-Trust acquires pool of 2&ndash;3 vehicles (~AUD 1M). Operated by Velo Rentals.</p>
+
+<div class="related-party-box"><strong>Related Party:</strong> Eduardo, Founder &amp; Executive Chairman of OzTokenize, owns Velo Rentals. Arm&rsquo;s-length terms, Trustee-approved, prominently disclosed in IM.</div>
+
+<p><strong>Token-Based Vehicle Tracking:</strong> Each vehicle&rsquo;s token links to real-time operational data: GPS location, maintenance records, condition reports, mileage, service history. Updates via API feeds from vehicle management system and IoT devices.</p>
+<p><strong>Valuation:</strong> RedBook and CarSales APIs. Vehicles held until ~30,000 km, then sold.</p>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 12 &mdash; Luxury Car Investment Flow</div>
+<div class="mermaid">
+graph TD
+  A[Investor Subscribes] --> B[Funds to Applications Account]
+  B --> C[Trustee Approves]
+  C --> D[Vehicles Acquired, Title to Sub-Trust]
+  D --> E[Tokens Minted + Vehicle Tracking Live]
+  E --> F[Velo Rentals Operates]
+  F --> G[Rental Income to Sub-Trust]
+  G --> H[Distributions Weekly/Monthly]
+  H --> I{At 30K km?}
+  I -->|No| F
+  I -->|Yes| J[Vehicle Sold]
+  J --> K[Proceeds Distributed, Tokens Burned]
+  style D fill:#E8F5E8,stroke:#2E8B8B,stroke-width:2px
+  style E fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+</div>
+</div>
+
+<p><strong>Distribution:</strong> Weekly or monthly from net rental income after operating expenses (insurance, maintenance, management fees, depreciation). Accounting firm calculates tax components including GST and depreciation deductions.</p>
+</section>
+
+<!-- SECTION 9 -->
+<section id="s9" class="section">
+<div class="section-header">
+  <span class="section-badge">09</span>
+  <h1>Crypto Flows and SwapAroo Integration</h1>
+</div>
+
+<p>The standard investor journey does not involve cryptocurrency. SwapAroo, a separate Nortech Labs brand, is invoked only for specific use cases.</p>
+
+<h2>9.1 SwapAroo Overview</h2>
+<p>AUSTRAC dual-licensed (digital currency exchange + remittance) with Westpac banking. Operates independently of OzTokenize&rsquo;s scheme structure.</p>
+
+<h2>9.2 Three Use Cases</h2>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 13 &mdash; SwapAroo Integration Flows</div>
+<div class="mermaid">
+graph LR
+  subgraph On-Ramp
+    II1[International Investor] -->|Crypto| SW1[SwapAroo] -->|AUD| AA1[Applications Account]
+  end
+  subgraph Off-Ramp
+    AA2[Distribution / Redemption] -->|AUD| SW2[SwapAroo] -->|Crypto| II2[International Investor]
+  end
+  subgraph Operational
+    ST[Sub-Trust] -->|AUD| SW3[SwapAroo] -->|Crypto| MKT[Crypto-Native Expenses]
+  end
+  style SW1 fill:#C8A951,color:#1B2A4A,stroke:#C8A951,stroke-width:2px
+  style SW2 fill:#C8A951,color:#1B2A4A,stroke:#C8A951,stroke-width:2px
+  style SW3 fill:#C8A951,color:#1B2A4A,stroke:#C8A951,stroke-width:2px
+</div>
+</div>
+
+<ol>
+<li><strong>International investors (on-ramp):</strong> convert crypto to AUD via SwapAroo before subscribing.</li>
+<li><strong>International investors (off-ramp):</strong> convert distributions/redemption proceeds to crypto.</li>
+<li><strong>Operational crypto:</strong> Sub-Trusts with crypto-denominated expenses (e.g., Alphractal marketing).</li>
+</ol>
+
+<div class="note"><strong>Key:</strong> Funds enter OzTokenize as AUD. The scheme never directly holds cryptocurrency on behalf of investors. SwapAroo&rsquo;s compliance is independent of OzTokenize&rsquo;s.</div>
+</section>
+
+<!-- SECTION 10 -->
+<section id="s10" class="section">
+<div class="section-header">
+  <span class="section-badge">10</span>
+  <h1>Automated Audit and Compliance System</h1>
+</div>
+
+<p>Triple-layer audit architecture with continuous monitoring. Each layer operates independently; outputs are cross-referenced.</p>
+
+<div class="diagram-container">
+<div class="diagram-title">Figure 14 &mdash; Triple-Layer Audit Architecture</div>
+<div class="mermaid">
+graph TB
+  subgraph L1[Financial Audit]
+    F1[Bank Reconciliation]
+    F2[Distribution Verification]
+    F3[Expense Matching]
+    F4[NAV Cross-Check]
+  end
+  subgraph L2[Smart Contract Audit]
+    S1[Token Supply Check]
+    S2[Whitelist vs KYC List]
+    S3[Event Log Matching]
+  end
+  subgraph L3[Regulatory Compliance]
+    R1[KYC Monitoring]
+    R2[Jurisdiction Screening]
+    R3[Related-Party Flagging]
+    R4[Reg Change Tracking]
+  end
+  L1 --> X[Cross-Reference Engine]
+  L2 --> X
+  L3 --> X
+  X -->|Discrepancy| AL[Alert + Investigation]
+  X -->|Aligned| RP[Compliance Report to Trustee]
+  style L1 fill:#EDF5FA,stroke:#1B2A4A,stroke-width:2px
+  style L2 fill:#FEF3E0,stroke:#C8A951,stroke-width:2px
+  style L3 fill:#E8F5E8,stroke:#2E8B8B,stroke-width:2px
+  style X fill:#1B2A4A,color:#fff,stroke:#1B2A4A,stroke-width:2px
+</div>
+</div>
+
+<h2>10.1 Financial Audit Layer</h2>
+<ul>
+<li>Automated reconciliation: platform records vs. Applications Account vs. Operational Account bank statements.</li>
+<li>Distribution verification: engine output vs. accounting firm&rsquo;s independent calculation.</li>
+<li>Expense tracking: submissions matched against bank debits; unmatched items flagged.</li>
+<li>NAV calculation: cross-referenced against Trustee&rsquo;s independent valuation.</li>
+</ul>
+
+<h2>10.2 Smart Contract Audit Layer</h2>
+<ul>
+<li>Token supply: minted minus burned = active investor registry.</li>
+<li>Whitelist vs. KYC-cleared list: any discrepancy triggers immediate alert.</li>
+<li>Event log: all on-chain events compared against platform transaction records.</li>
+<li>Periodic security audits by independent blockchain security firms.</li>
+</ul>
+
+<h2>10.3 Regulatory Compliance Layer</h2>
+<ul>
+<li>Continuous KYC status monitoring with automated alerts.</li>
+<li>Jurisdiction verification against updated sanctions lists.</li>
+<li>Related-party transaction flagging and enhanced review routing.</li>
+<li>Regulatory change tracking with impact assessment.</li>
+<li>Automated generation of Trustee quarterly attestation data packages.</li>
+</ul>
+
+<h2>10.4 Audit Trail</h2>
+<p>Every action generates an immutable record in three locations: platform database, Ethereum blockchain, and Trustee&rsquo;s independent systems. Tampering requires simultaneous modification of three independent systems.</p>
+</section>
+
+<!-- SECTION 11 -->
+<section id="s11" class="section">
+<div class="section-header">
+  <span class="section-badge">11</span>
+  <h1>Token Model</h1>
+</div>
+
+<p>OzTokenize does not issue a native platform token. No utility token, no governance token. Tokens exist exclusively to represent beneficial ownership interests in individual Sub-Trusts.</p>
+
+<h2>11.1 Token Function</h2>
+<p>Each Sub-Trust&rsquo;s tokens represent the holder&rsquo;s proportional interest in that Sub-Trust&rsquo;s assets. The token does not confer voting rights or governance authority beyond representing the economic interest from the Trust Deed and IM. The legal interest exists because of the Trust Deed; the token records it on-chain.</p>
+
+<h2>11.2 Token Pricing</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Asset Class</th><th>Pricing Methodology</th></tr>
+<tr><td>Real Estate</td><td>NAV-based: independent valuation / total tokens</td></tr>
+<tr><td>Alphractal (SAFE)</td><td>SAFE valuation cap, adjusted for subsequent events</td></tr>
+<tr><td>Luxury Cars</td><td>NAV-based: RedBook/CarSales market values, adjusted for depreciation</td></tr>
+</table>
+</div>
+
+<h2>11.3 No Secondary Market at Launch</h2>
+<p>Investors acquire tokens via primary subscription and exit via platform redemption. This avoids additional AUSTRAC registration and market licence requirements. Secondary market may be introduced in future phases as AUM grows and regulatory conditions permit.</p>
+
+<h2>11.4 Why ERC-1400</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Feature</th><th>ERC-20</th><th>ERC-1400 (OzTokenize)</th></tr>
+<tr><td>Transfer restrictions</td><td>None</td><td>Whitelist-enforced, KYC-only</td></tr>
+<tr><td>Partition support</td><td>No</td><td>Yes, per Sub-Trust</td></tr>
+<tr><td>Forced transfers</td><td>No</td><td>Yes, for regulatory compliance</td></tr>
+<tr><td>Document linking</td><td>No</td><td>On-chain references to IM/Trust Deed</td></tr>
+<tr><td>Issuance control</td><td>Open</td><td>Authorised operator only</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SECTION 12 -->
+<section id="s12" class="section">
+<div class="section-header">
+  <span class="section-badge">12</span>
+  <h1>Related-Party Transaction Management</h1>
+</div>
+
+<p>Two of OzTokenize&rsquo;s first three asset classes involve related-party relationships. This is disclosed, managed, and subject to enhanced governance exceeding minimum requirements.</p>
+
+<h2>12.1 Identified Relationships</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Asset</th><th>Relationship</th><th>Conflict</th></tr>
+<tr><td>Alphractal</td><td>NorTech Labs owns 30% of shares. Pablo is CTO of both entities.</td><td>Sub-Trust invests in parent company&rsquo;s asset. Valuation and terms must be independently verified.</td></tr>
+<tr><td>Luxury Cars (Velo Rentals)</td><td>Eduardo, OzTokenize Founder, owns Velo Rentals.</td><td>Sub-Trust pays management fees to co-founder&rsquo;s company. Terms must be arm&rsquo;s length.</td></tr>
+<tr><td>Real Estate (Cleveland)</td><td>No identified related-party relationship.</td><td>Standard governance.</td></tr>
+</table>
+</div>
+
+<h2>12.2 Governance Framework</h2>
+<ol>
+<li><strong>Prominent disclosure:</strong> dedicated related-party section in each affected IM/PDS.</li>
+<li><strong>Independent valuation:</strong> all related-party terms independently assessed before execution.</li>
+<li><strong>Trustee oversight:</strong> Trustee reviews and approves all related-party transactions.</li>
+<li><strong>Ongoing reporting:</strong> flagged in every reporting cycle (distributions, expenses, annual reviews).</li>
+<li><strong>Investor consent:</strong> obtained where required by Trust Deed or Corporations Act.</li>
+</ol>
+
+<h2>12.3 Rationale</h2>
+<p>Related-party transactions in the initial pipeline reflect the pragmatic reality of launching a new platform. The governance framework is deliberately over-engineered to set the precedent for all future transactions, including those with no relationship to OzTokenize.</p>
+</section>
+
+<!-- SECTION 13 -->
+<section id="s13" class="section">
+<div class="section-header">
+  <span class="section-badge">13</span>
+  <h1>Valuation Framework</h1>
+</div>
+
+<h2>13.1 Principles</h2>
+<ul>
+<li><strong>Independence:</strong> valuations performed or verified by parties independent of the asset owner and OzTokenize.</li>
+<li><strong>Third-party data:</strong> external, verifiable sources (registered valuers, market APIs, audited financials).</li>
+<li><strong>Documentation:</strong> every valuation, methodology, inputs, and assumptions retained for compliance.</li>
+<li><strong>Frequency:</strong> at acquisition, periodically (at least annually), and upon material change.</li>
+<li><strong>Consistency:</strong> IM methodology applied consistently unless Trustee-approved change.</li>
+</ul>
+
+<h2>13.2 Asset-Specific Methods</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Asset</th><th>Method</th><th>Data Sources</th><th>Frequency</th></tr>
+<tr><td>Real Estate</td><td>Independent registered valuer; NAV per token</td><td>Registered valuer, comparable sales, rental yields</td><td>Acquisition, annually, material change</td></tr>
+<tr><td>Alphractal</td><td>SAFE valuation cap; adjusted per events</td><td>SAFE terms, comparable SaaS valuations, independent assessment</td><td>Acquisition, per event, annually</td></tr>
+<tr><td>Luxury Cars</td><td>Market-based (RedBook/CarSales)</td><td>RedBook API, CarSales API, condition reports</td><td>Monthly (auto), quarterly (human)</td></tr>
+</table>
+</div>
+
+<h2>13.3 Accounting and Tax</h2>
+<p>Accounting firm (currently being appointed) engaged at SPV level for each Sub-Trust: depreciation schedules, GST, tax components for distribution statements, annual financials. The accounting firm assumes professional liability for distribution calculations, creating clear accountability from accounting firm to Trustee to platform to investor.</p>
+</section>
+
+<!-- SECTION 14 -->
+<section id="s14" class="section">
+<div class="section-header">
+  <span class="section-badge">14</span>
+  <h1>Revenue Model</h1>
+</div>
+
+<div class="table-wrap">
+<table>
+<tr><th>Fee Type</th><th>Description</th><th>Charged To</th></tr>
+<tr><td>Structuring Fee (Upfront)</td><td>One-time: structuring Sub-Trust, legal documents, asset onboarding</td><td>Asset Owner / initial subscription</td></tr>
+<tr><td>Management Fee (Ongoing)</td><td>Annual AUM-based: platform operations, investor services, compliance</td><td>Sub-Trust (NAV reduction)</td></tr>
+<tr><td>Platform Technology Fee</td><td>Blockchain infrastructure, smart contract maintenance</td><td>Sub-Trust</td></tr>
+<tr><td>Performance Fee (where applicable)</td><td>Performance-linked, per IM terms</td><td>Sub-Trust (high-water mark)</td></tr>
+</table>
+</div>
+
+<h2>14.1 Trustee Removability</h2>
+<p>Fees structured as service fees, not equity interests. Trust structure, bank accounts, and investor records exist independently of OzTokenize&rsquo;s technology. In a transition, the Trustee appoints a replacement administrator and the scheme continues under the existing Trust Deed.</p>
+
+<h2>14.2 Financial Projections</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Metric</th><th>Year 1</th><th>Year 2</th></tr>
+<tr><td>Target AUM</td><td>AUD 50 million</td><td>AUD 100&ndash;200 million</td></tr>
+<tr><td>Active Sub-Trusts</td><td>3&ndash;5</td><td>8&ndash;15</td></tr>
+<tr><td>Asset Verticals</td><td>3 (Real Estate, Tech Equity, Luxury Cars)</td><td>4+ (adding Infrastructure)</td></tr>
+<tr><td>Investor Base</td><td>Wholesale + Retail</td><td>Wholesale + Retail</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SECTION 15 -->
+<section id="s15" class="section">
+<div class="section-header">
+  <span class="section-badge">15</span>
+  <h1>Risk Factors</h1>
+</div>
+
+<h2>15.1 Regulatory Risk</h2>
+<p>The Australian regulatory framework for digital assets is evolving. Changes to legislation or ASIC guidance could require structural modifications or impose additional costs. Mitigated through compliance-first architecture and ongoing regulatory monitoring.</p>
+
+<h2>15.2 Technology Risk</h2>
+<p>Smart contract vulnerabilities, blockchain disruptions, gas fee volatility. Mitigated through independent audits, hybrid architecture (platform functions without blockchain), and multi-sig key management.</p>
+
+<h2>15.3 Liquidity Risk</h2>
+<p>No secondary market at launch. Investors hold until the Sub-Trust&rsquo;s defined exit event or redemption window. Disclosed in each IM/PDS.</p>
+
+<h2>15.4 Asset-Specific Risk</h2>
+<p>Property values may decline, startups may underperform, vehicles may depreciate faster. Detailed in each Sub-Trust&rsquo;s IM/PDS.</p>
+
+<h2>15.5 Related-Party Risk</h2>
+<p>Two launch assets involve related-party relationships. Enhanced governance (Section 12) applies, but conflicts may not be fully eliminated by disclosure alone.</p>
+
+<h2>15.6 Counterparty Risk</h2>
+<p>Dependence on Sumsub, banking partners, Trustee, accounting firm, and legal counsel. Documented SLAs and contingency plans for critical provider replacement.</p>
+
+<h2>15.7 Operational Risk</h2>
+<p>Pre-revenue platform with typical early-stage risks: team dependency, funding requirements, track record building. CAR arrangement bridges to full AFSL.</p>
+</section>
+
+<!-- SECTION 16 -->
+<section id="s16" class="section">
+<div class="section-header">
+  <span class="section-badge">16</span>
+  <h1>Roadmap</h1>
+</div>
+
+<h2>Phase 1: Launch (Q2 2026)</h2>
+<p>Deliverables within 6&ndash;8 weeks of Trustee sign-off:</p>
+<ul>
+<li>Trust Deed execution (Head Trust + Sub-Trust provisions).</li>
+<li>First IM (Cleveland real estate) reviewed by lawyers and Trustee.</li>
+<li>AML/CTF onboarding with Sumsub integration live.</li>
+<li>Bank accounts established (Applications + Operational).</li>
+<li>ABN/TFN obtained for scheme.</li>
+<li>CAR agreement signed with AFSL holder.</li>
+<li>Platform MVP: investor onboarding, KYC, subscription, token minting.</li>
+<li>First asset live: Cleveland property Sub-Trust.</li>
+</ul>
+
+<h2>Phase 2: Expansion (H2 2026)</h2>
+<ul>
+<li>Alphractal and Luxury Cars Sub-Trusts live.</li>
+<li>Accounting firm appointed and integrated.</li>
+<li>Token-based vehicle tracking live for luxury cars.</li>
+<li>Trustee API data feeds fully operational.</li>
+<li>Triple-layer audit system automated.</li>
+<li>AUM target: AUD 20&ndash;30 million.</li>
+</ul>
+
+<h2>Phase 3: Scale (2027)</h2>
+<ul>
+<li>Fourth vertical: infrastructure and development projects.</li>
+<li>Third-party asset owners onboarded.</li>
+<li>AFSL application commenced.</li>
+<li>Secondary market feasibility assessment.</li>
+<li>Target AUM: AUD 50&ndash;100 million.</li>
+</ul>
+
+<h2>Phase 4: Maturity (2028+)</h2>
+<ul>
+<li>Standalone AFSL obtained.</li>
+<li>Secondary market launch (with AUSTRAC registration).</li>
+<li>International expansion (NZ, Singapore, UK).</li>
+<li>Target AUM: AUD 200+ million.</li>
+</ul>
+</section>
+
+<!-- SECTION 17 -->
+<section id="s17" class="section">
+<div class="section-header">
+  <span class="section-badge">17</span>
+  <h1>Team and Governance</h1>
+</div>
+
+<h2>17.1 Founding Team</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Name</th><th>Role</th><th>Focus</th></tr>
+<tr><td>Kevin Nolan</td><td>Founder &amp; Managing Director</td><td>Operational leadership, regulatory alignment, commercial execution</td></tr>
+<tr><td>Eduardo</td><td>Founder &amp; Executive Chairman</td><td>Vision, capital alignment, long-term strategy, governance. Founder of SwapAroo (AUSTRAC dual-licensed) and Velo Rentals.</td></tr>
+<tr><td>Pablo</td><td>Founder &amp; Chief Technology Officer</td><td>Platform architecture, automation, delivery. Leads development of OzTokenize&rsquo;s core infrastructure.</td></tr>
+</table>
+</div>
+
+<h2>17.2 External Advisors and Service Providers</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Role</th><th>Entity</th><th>Responsibility</th></tr>
+<tr><td>Trustee / Custodian</td><td>Independent (Melbourne)</td><td>Custodial oversight, dual-control banking, quarterly attestation, IM/PDS review</td></tr>
+<tr><td>Legal Counsel</td><td>To be confirmed</td><td>Trust Deed, IM/PDS preparation, regulatory compliance, CAR agreement</td></tr>
+<tr><td>Accounting Firm</td><td>TBA (being appointed)</td><td>SPV accounting: depreciation, GST, tax components, distribution statements</td></tr>
+<tr><td>KYC/AML Provider</td><td>Sumsub</td><td>Identity verification, PEP/sanctions screening, ongoing monitoring</td></tr>
+<tr><td>Blockchain Auditor</td><td>To be appointed</td><td>Independent smart contract security audits</td></tr>
+</table>
+</div>
+
+<h2>17.3 Governance Principles</h2>
+<ol>
+<li><strong>Independence:</strong> the Trustee operates independently and can act unilaterally if scheme members&rsquo; interests are at risk.</li>
+<li><strong>Transparency:</strong> all material information, conflicts, and operational data available to Trustee and investors via structured reporting.</li>
+<li><strong>Removability:</strong> OzTokenize can be replaced as scheme administrator without affecting investors&rsquo; legal rights, asset custody, or the trust structure.</li>
+</ol>
+</section>
+
+<!-- APPENDIX A -->
+<section id="appendix-a" class="section">
+<div class="section-header">
+  <span class="section-badge">A</span>
+  <h1>Appendix A: Glossary of Terms</h1>
+</div>
+<div class="table-wrap">
+<table>
+<tr><th>Term</th><th>Definition</th></tr>
+<tr><td>AFSL</td><td>Australian Financial Services Licence</td></tr>
+<tr><td>AML/CTF</td><td>Anti-Money Laundering / Counter-Terrorism Financing</td></tr>
+<tr><td>AR</td><td>Authorised Representative</td></tr>
+<tr><td>ASIC</td><td>Australian Securities and Investments Commission</td></tr>
+<tr><td>ATO</td><td>Australian Taxation Office</td></tr>
+<tr><td>AUM</td><td>Assets Under Management</td></tr>
+<tr><td>AUSTRAC</td><td>Australian Transaction Reports and Analysis Centre</td></tr>
+<tr><td>CAR</td><td>Corporate Authorised Representative</td></tr>
+<tr><td>ERC-1400</td><td>Ethereum security token standard with built-in compliance</td></tr>
+<tr><td>IM</td><td>Information Memorandum (wholesale disclosure document)</td></tr>
+<tr><td>MIS</td><td>Managed Investment Scheme (Corporations Act Chapter 5C)</td></tr>
+<tr><td>NAV</td><td>Net Asset Value</td></tr>
+<tr><td>NTA</td><td>Net Tangible Assets</td></tr>
+<tr><td>PDS</td><td>Product Disclosure Statement (retail disclosure document)</td></tr>
+<tr><td>PEP</td><td>Politically Exposed Person</td></tr>
+<tr><td>RWA</td><td>Real-World Assets</td></tr>
+<tr><td>SAFE</td><td>Simple Agreement for Future Equity</td></tr>
+<tr><td>SPV</td><td>Special Purpose Vehicle</td></tr>
+</table>
+</div>
+</section>
+
+<!-- APPENDIX B -->
+<section id="appendix-b" class="section">
+<div class="section-header">
+  <span class="section-badge">B</span>
+  <h1>Appendix B: Regulatory References</h1>
+</div>
+<ul>
+<li>Corporations Act 2001 (Cth), Chapter 5C (Managed Investment Schemes) and Chapter 7 (Financial Products and Services)</li>
+<li>ASIC Regulatory Guide 166: AFS Licensing Financial Requirements</li>
+<li>ASIC Information Sheet 225: Digital Assets (Updated October 2025)</li>
+<li>Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (Cth)</li>
+<li>Digital Assets Framework Bill 2025</li>
+<li>Reserve Bank of Australia: Project Acacia Reports (2024&ndash;2025)</li>
+<li>ASIC Regulatory Guide 136: Managed Investment Schemes</li>
+<li>DFAT Consolidated List of Sanctioned Entities</li>
+</ul>
+</section>
+
+<footer>
+&copy; 2026 OzTokenize / Nortech Labs Pty Ltd. All rights reserved. | Confidential
+</footer>
+
+</main>
+</div>
+
+<!-- Back to top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+<svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Mobile sidebar toggle -->
+<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation">
+<svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+</button>
+
+
+<!-- Back to top -->
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+<svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- Mobile sidebar toggle -->
+<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle navigation">
+<svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+</button>
+
+<script>
+// Mermaid initialization
+mermaid.initialize({
+  startOnLoad: true,
+  theme: 'base',
+  themeVariables: {
+    primaryColor:'#EDF5FA',primaryTextColor:'#1B2A4A',primaryBorderColor:'#1B2A4A',
+    lineColor:'#2E8B8B',secondaryColor:'#FEF3E0',tertiaryColor:'#f0f6fa',
+    fontFamily:"'Inter', system-ui, sans-serif",fontSize:'14px',
+    nodeBorder:'#1B2A4A',mainBkg:'#EDF5FA',
+    clusterBkg:'#f8fafc',clusterBorder:'#CBD5E0',
+    titleColor:'#1B2A4A',edgeLabelBackground:'#ffffff',
+  },
+  flowchart:{curve:'basis',padding:16,nodeSpacing:50,rankSpacing:60,htmlLabels:true,useMaxWidth:true},
+  sequence:{mirrorActors:false,messageMargin:40,width:180,boxMargin:8,noteMargin:12,actorFontSize:'14px',messageFontSize:'13px'}
+});
+</script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

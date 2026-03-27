@@ -1,0 +1,59 @@
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Brand Colors */
+  --navy: #1B2A4A;
+  --navy-light: #253a64;
+  --navy-dark: #0f1a2e;
+  --navy-900: #0a1120;
+  --teal: #2E8B8B;
+  --teal-light: #3aacac;
+  --teal-dark: #1f6b6b;
+  --gold: #C8A951;
+  --gold-light: #d4bc72;
+  --gold-dark: #a8893a;
+
+  /* Surfaces */
+  --bg: #F8FAFB;
+  --bg-alt: #f0f4f8;
+  --card: #ffffff;
+  --card-hover: #fafcff;
+
+  /* Text */
+  --txt: #2d3748;
+  --txt-secondary: #4a5568;
+  --txt-muted: #718096;
+  --txt-light: #a0aec0;
+
+  /* Borders */
+  --border: #E2E8F0;
+  --border-light: #EDF2F7;
+  --border-dark: #CBD5E0;
+
+  /* Sidebar */
+  --sidebar-w: 280px;
+  --sidebar-bg: var(--navy-900);
+  --sidebar-text: #94a3b8;
+  --sidebar-active: var(--gold);
+
+  /* Typography */
+  --font: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --section-gap: 72px;
+  --content-pad: 64px;
+
+  /* Misc */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 50px rgba(0,0,0,0.15);
+  --transition: 250ms ease;
+  --transition-slow: 500ms ease;
+}

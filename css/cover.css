@@ -1,0 +1,269 @@
+/* ============================================================
+   COVER / HERO PAGE
+   ============================================================ */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--navy-900);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 40px;
+}
+
+/* Animated grid background */
+.cover-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(46,139,139,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(46,139,139,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridPulse 8s ease-in-out infinite;
+}
+
+/* Radial glow effects */
+.cover-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: glowFloat 12s ease-in-out infinite;
+}
+.cover-glow--teal {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(46,139,139,0.15), transparent 70%);
+  top: 10%; left: 15%;
+}
+.cover-glow--gold {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(200,169,81,0.1), transparent 70%);
+  bottom: 10%; right: 15%;
+  animation-delay: -4s;
+}
+.cover-glow--navy {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(27,42,74,0.4), transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: none;
+}
+
+/* Canvas for particles */
+#particles-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Content */
+.cover-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.cover-logo {
+  max-width: 320px;
+  width: 80%;
+  margin: 0 auto 40px;
+  opacity: 0;
+  animation: fadeInScale 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.cover-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,169,81,0.1);
+  border: 1px solid rgba(200,169,81,0.2);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+}
+.cover-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.cover h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.55s forwards;
+}
+.cover h1 span {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cover-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255,255,255,0.55);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.7s forwards;
+}
+
+/* Stats row */
+.cover-stats {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.85s forwards;
+}
+.cover-stat {
+  text-align: center;
+  min-width: 120px;
+}
+.cover-stat-value {
+  font-family: var(--mono);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.2;
+}
+.cover-stat-label {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* CTA */
+.cover-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--navy-900);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  transition: all var(--transition);
+  box-shadow: 0 4px 20px rgba(200,169,81,0.25);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 1s forwards;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.cover-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200,169,81,0.35);
+  color: var(--navy-900);
+}
+.cover-cta svg {
+  width: 18px; height: 18px;
+  stroke: var(--navy-900);
+  fill: none;
+  stroke-width: 2;
+  transition: transform var(--transition);
+}
+.cover-cta:hover svg { transform: translateY(2px); }
+
+/* Version info */
+.cover-meta {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 1.2s forwards;
+}
+.cover-version {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 1px;
+}
+.cover-scroll-icon {
+  width: 20px; height: 30px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  position: relative;
+}
+.cover-scroll-icon::after {
+  content: '';
+  position: absolute;
+  top: 6px; left: 50%;
+  width: 3px; height: 6px;
+  margin-left: -1.5px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 3px;
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+@keyframes glowFloat {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(20px, -15px); }
+  66% { transform: translate(-15px, 10px); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes scrollDot {
+  0% { top: 6px; opacity: 1; }
+  50% { top: 14px; opacity: 0.3; }
+  100% { top: 6px; opacity: 1; }
+}
+
+/* ============================================================
+   RESPONSIVE COVER
+   ============================================================ */
+@media (max-width: 768px) {
+  .cover { padding: 40px 24px; }
+  .cover-stats { gap: 20px; }
+  .cover-stat { min-width: 90px; }
+  .cover-stat-value { font-size: 1.4rem; }
+  .cover-glow--teal { width: 300px; height: 300px; }
+  .cover-glow--gold { width: 250px; height: 250px; }
+}
