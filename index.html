@@ -397,13 +397,13 @@ graph TB
 <div class="diagram-title">Figure 4 &mdash; Investor Lifecycle</div>
 <div class="mermaid">
 graph TD
-  A[1. Register on Platform] --> B[2. KYC/AML via Sumsub]
-  B --> C{KYC Clear?}
-  C -->|Yes| D[3. Wholesale or Retail Classification]
-  C -->|No| E[Manual Review or Reject]
-  E -->|Cleared| D
-  D --> F[4. Browse Sub-Trusts]
-  F --> G[5. Submit Subscription]
+  A[1. Register on Platform] --> B[2. Browse Sub-Trusts]
+  B --> C[3. KYC/AML via Sumsub]
+  C --> D{KYC Clear?}
+  D -->|Yes| E[4. Wholesale Classification]
+  D -->|No| F[Manual Review or Reject]
+  F -->|Cleared| E
+  E --> G[5. Submit Subscription]
   G --> H[6. Payment to Applications Account]
   H --> I{Funds + KYC OK?}
   I -->|Yes| J[7. Tokens Minted ERC-1400]
@@ -418,9 +418,9 @@ graph TD
 
 <ol>
 <li><strong>Registration:</strong> investor creates an account and provides personal/entity details.</li>
-<li><strong>KYC/AML:</strong> Sumsub performs identity verification, document checks, PEP screening, sanctions screening, and jurisdiction validation.</li>
-<li><strong>Classification:</strong> wholesale (AUD 500K+ or accountant certificate) or retail (PDS issued, cooling-off period applies).</li>
 <li><strong>Sub-Trust Selection:</strong> investor browses opportunities with IM/PDS, risk disclosures, fee structures, and distribution methodology.</li>
+<li><strong>KYC/AML:</strong> Sumsub performs identity verification, document checks, PEP screening, sanctions screening, and jurisdiction validation.</li>
+<li><strong>Classification:</strong> wholesale (AUD 500K+ or accountant certificate).</li>
 <li><strong>Subscription:</strong> application submitted with IM/PDS acknowledgment and investor declaration.</li>
 <li><strong>Payment:</strong> funds transferred to Applications Account (Trustee-controlled). Cleared funds and KYC verification required.</li>
 <li><strong>Token Issuance:</strong> ERC-1400 tokens minted in the relevant Sub-Trust partition.</li>
