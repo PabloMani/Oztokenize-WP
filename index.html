@@ -150,7 +150,7 @@
   <h1>Executive Summary</h1>
 </div>
 
-<p>OzTokenize is building Australia&rsquo;s compliance-first infrastructure for real-world asset (RWA) tokenization. The platform enables investors &mdash; both Wholesale and Retail &mdash; to access institutional-grade alternative investments through a fully regulated Managed Investment Scheme (MIS) structure, enhanced by blockchain-based ownership records.</p>
+<p>OzTokenize is building Australia&rsquo;s compliance-first infrastructure for real-world asset (RWA) tokenization. The platform enables investors &mdash; Wholesale &mdash; to access institutional-grade alternative investments through a fully regulated Managed Investment Scheme (MIS) structure, enhanced by blockchain-based ownership records.</p>
 
 <div class="note"><strong>Core design principle:</strong> strip away the technology layer, and what remains is a fully functional, ASIC-defensible investment platform. Every workflow, compliance check, and investor protection maps directly to existing obligations under the Corporations Act 2001, ASIC Regulatory Guides, and established fund administration practices. The blockchain layer enhances transparency, auditability, and operational efficiency without replacing any legal or regulatory requirement.</div>
 
@@ -189,12 +189,12 @@ graph LR
 <li><strong>Independent Trustee oversight:</strong> dual-control banking, threshold-based expense approval, and quarterly compliance attestation.</li>
 <li><strong>Full KYC/AML/CTF via Sumsub:</strong> including PEP screening and ongoing monitoring.</li>
 <li><strong>Triple-layer automated audit:</strong> financial reconciliation, smart contract verification, and regulatory compliance checks.</li>
-<li><strong>Retail and Wholesale from day one:</strong> full regulatory compliance for both investor classes, with PDS for retail and IM for wholesale.</li>
+<li><strong>Wholesale from day one:</strong> full regulatory compliance for both investor classes, with PDS for retail and IM for wholesale.</li>
 <li><strong>SwapAroo integration:</strong> regulated fiat-to-crypto on-ramp/off-ramp for international investors, operating under dual AUSTRAC licences with Westpac banking.</li>
 </ul>
 
 <h2>1.5 Financial Outlook</h2>
-<p>The platform targets AUD 50 million in Assets Under Management (AUM) in Year 1 and AUD 100&ndash;200 million by Year 2, driven by capital deployment across the initial three asset verticals. Revenue is generated through upfront structuring fees, ongoing management fees, and platform technology fees.</p>
+<p>The platform targets AUD 50 million in Assets Under Management (AUM) in Year 1 and AUD 100&ndash;200 million by Year 2, driven by capital deployment across the initial three asset verticals. Revenue is generated through upfront structuring fees, ongoing management fees, capital raise fees, and platform technology fees.</p>
 </section>
 
 <!-- SECTION 2 -->
@@ -268,7 +268,7 @@ graph TB
 <p>The Trustee does not access the OzTokenize platform directly. The platform provides structured API data feeds ingested into the Trustee&rsquo;s own compliance and reconciliation systems.</p>
 
 <h2>3.4 Investor Classification</h2>
-<p>OzTokenize accepts both Wholesale and Retail investors from launch. Wholesale: AUD 500,000+ single transaction, or accountant certificate (net assets AUD 2.5M+ or gross income AUD 250K+ p.a. for two years). Retail: Product Disclosure Statement (PDS) in compliance with Part 7.9 of the Corporations Act, with consumer protection measures including cooling-off periods where applicable.</p>
+<p>OzTokenize accepts Wholesale investors from launch. Wholesale: AUD 500,000+ single transaction, or accountant certificate (net assets AUD 2.5M+ or gross income AUD 250K+ p.a. for two years). Retail: Product Disclosure Statement (PDS) in compliance with Part 7.9 of the Corporations Act, with consumer protection measures including cooling-off periods where applicable.</p>
 <p>For retail custody, OzTokenize engages an external custodian meeting the AUD 10 million NTA requirement, or satisfies the NTA threshold directly.</p>
 
 <h2>3.5 Three Regulators</h2>
@@ -631,7 +631,7 @@ graph TD
 <h2>8.1 Real Estate: Property Development</h2>
 <p><strong>Structure:</strong> Individual Sub-Trust acquires property (or right to acquire via put-and-call option). Tokens issued after legal ownership transfers.</p>
 <p><strong>First Asset: Cleveland, QLD.</strong> Three-quarters through construction. Tokens issued only after ownership transfer to Sub-Trust. Investors receive tokens representing an actual property, not a promise.</p>
-<p><strong>Pipeline: Park Lane Southport.</strong> Hotel on Gold Coast.</p>
+<p><strong>Pipeline: Southport.</strong> Hotel on Gold Coast.</p>
 
 <div class="diagram-container">
 <div class="diagram-title">Figure 10 &mdash; Real Estate Investment Flow</div>
@@ -661,7 +661,7 @@ graph TD
 
 <div class="related-party-box"><strong>Related Party:</strong> NorTech Labs owns 30% of Alphractal shares. Pablo serves as CTO of both entities. Prominently disclosed in IM, Trustee informed, enhanced governance applies.</div>
 
-<p><strong>Business:</strong> ~25,000 registered users, &lt;2% conversion, USD 39/month starting. Raising seed round for USD 2M marketing investment.</p>
+<p><strong>Business:</strong> ~25,000 registered users, &lt;2% conversion, USD 39/month starting. Raising seed round for AUD 2M marketing investment.</p>
 <p><strong>Terms:</strong> 24-month lockup. Token pricing from SAFE valuation cap, adjusted for subsequent events.</p>
 
 <div class="diagram-container">
@@ -871,7 +871,7 @@ graph TB
   <h1>Related-Party Transaction Management</h1>
 </div>
 
-<p>Two of OzTokenize&rsquo;s first three asset classes involve related-party relationships. This is disclosed, managed, and subject to enhanced governance exceeding minimum requirements.</p>
+<p>Three of OzTokenize&rsquo;s first three asset classes involve related-party relationships. This is disclosed, managed, and subject to enhanced governance exceeding minimum requirements.</p>
 
 <h2>12.1 Identified Relationships</h2>
 <div class="table-wrap">
@@ -879,7 +879,7 @@ graph TB
 <tr><th>Asset</th><th>Relationship</th><th>Conflict</th></tr>
 <tr><td>Alphractal</td><td>NorTech Labs owns 30% of shares. Pablo is CTO of both entities.</td><td>Sub-Trust invests in parent company&rsquo;s asset. Valuation and terms must be independently verified.</td></tr>
 <tr><td>Luxury Cars (Velo Rentals)</td><td>Eduardo, OzTokenize Founder, owns Velo Rentals.</td><td>Sub-Trust pays management fees to co-founder&rsquo;s company. Terms must be arm&rsquo;s length.</td></tr>
-<tr><td>Real Estate (Cleveland)</td><td>No identified related-party relationship.</td><td>Standard governance.</td></tr>
+<tr><td>Real Estate (Cleveland)</td><td>Purchasing from a fund in which Kevin is the manager.</td><td>Sub-Trust acquires asset from related fund. Terms must be independently verified.</td></tr>
 </table>
 </div>
 
@@ -940,6 +940,8 @@ graph TB
 <tr><td>Management Fee (Ongoing)</td><td>Annual AUM-based: platform operations, investor services, compliance</td><td>Sub-Trust (NAV reduction)</td></tr>
 <tr><td>Platform Technology Fee</td><td>Blockchain infrastructure, smart contract maintenance</td><td>Sub-Trust</td></tr>
 <tr><td>Performance Fee (where applicable)</td><td>Performance-linked, per IM terms</td><td>Sub-Trust (high-water mark)</td></tr>
+<tr><td>Capital Raise Fee</td><td>Fee on capital raised for each Sub-Trust</td><td>Sub-Trust / investors</td></tr>
+<tr><td>Administration Fee</td><td>Ongoing fund administration, may include platform technology costs</td><td>Sub-Trust (NAV reduction)</td></tr>
 </table>
 </div>
 
@@ -951,7 +953,7 @@ graph TB
 <table>
 <tr><th>Metric</th><th>Year 1</th><th>Year 2</th></tr>
 <tr><td>Target AUM</td><td>AUD 50 million</td><td>AUD 100&ndash;200 million</td></tr>
-<tr><td>Active Sub-Trusts</td><td>3&ndash;5</td><td>8&ndash;15</td></tr>
+<tr><td>Active Sub-Trusts</td><td>5&ndash;10</td><td>15&ndash;20</td></tr>
 <tr><td>Asset Verticals</td><td>3 (Real Estate, Tech Equity, Luxury Cars)</td><td>4+ (adding Infrastructure)</td></tr>
 <tr><td>Investor Base</td><td>Wholesale + Retail</td><td>Wholesale + Retail</td></tr>
 </table>
@@ -978,7 +980,7 @@ graph TB
 <p>Property values may decline, startups may underperform, vehicles may depreciate faster. Detailed in each Sub-Trust&rsquo;s IM/PDS.</p>
 
 <h2>15.5 Related-Party Risk</h2>
-<p>Two launch assets involve related-party relationships. Enhanced governance (Section 12) applies, but conflicts may not be fully eliminated by disclosure alone.</p>
+<p>Three launch assets involve related-party relationships. Enhanced governance (Section 12) applies, but conflicts may not be fully eliminated by disclosure alone.</p>
 
 <h2>15.6 Counterparty Risk</h2>
 <p>Dependence on Sumsub, banking partners, Trustee, accounting firm, and legal counsel. Documented SLAs and contingency plans for critical provider replacement.</p>
@@ -998,22 +1000,23 @@ graph TB
 <p>Deliverables within 6&ndash;8 weeks of Trustee sign-off:</p>
 <ul>
 <li>Trust Deed execution (Head Trust + Sub-Trust provisions).</li>
-<li>First IM (Cleveland real estate) reviewed by lawyers and Trustee.</li>
+<li>First IM (Alphractal) reviewed by lawyers and Trustee.</li>
 <li>AML/CTF onboarding with Sumsub integration live.</li>
 <li>Bank accounts established (Applications + Operational).</li>
 <li>ABN/TFN obtained for scheme.</li>
 <li>CAR agreement signed with AFSL holder.</li>
 <li>Platform MVP: investor onboarding, KYC, subscription, token minting.</li>
-<li>First asset live: Cleveland property Sub-Trust.</li>
-</ul>
-
-<h2>Phase 2: Expansion (H2 2026)</h2>
-<ul>
-<li>Alphractal and Luxury Cars Sub-Trusts live.</li>
 <li>Accounting firm appointed and integrated.</li>
 <li>Token-based vehicle tracking live for luxury cars.</li>
 <li>Trustee API data feeds fully operational.</li>
 <li>Triple-layer audit system automated.</li>
+<li>First assets live, Alphractal &amp; Cleveland.</li>
+</ul>
+
+<h2>Phase 2: Expansion (H2 2026)</h2>
+<ul>
+<li>Luxury cars &amp; other asset Sub-Trusts live.</li>
+<li>Third-party asset owners onboarding pipeline open.</li>
 <li>AUM target: AUD 20&ndash;30 million.</li>
 </ul>
 
@@ -1030,7 +1033,7 @@ graph TB
 <ul>
 <li>Standalone AFSL obtained.</li>
 <li>Secondary market launch (with AUSTRAC registration).</li>
-<li>International expansion (NZ, Singapore, UK).</li>
+<li>International expansion (NZ, Singapore, UK). With Whitelabel.</li>
 <li>Target AUM: AUD 200+ million.</li>
 </ul>
 </section>
